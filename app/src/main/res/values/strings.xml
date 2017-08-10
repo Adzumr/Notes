@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="Notes">Notes</string>
+    <string name="NotesPic">NotesPics</string>
+    <string name="MyNotes">My Notes</string>
+    <string name="About">About</string>
+    <string name="Save">Save</string>
+    <string name="Share">Share</string>
+    <string name="Back">Back</string>
+    <string name="WhiteSpace">White Space</string>
+    <string name="Titile">Title</string>
+    <string name="title_activity_my_notes">MyNotesActivity</string>
+    <string name="NewNote">New Note</string>
+    <string name="AddNewNote">Add New Note</string>
+    <string name="TypeHere">Type Here</string>
+    <string name="ListNote">ListNote</string>
+    <string name="title_activity_demo">DemoActivity</string>
+</resources>
