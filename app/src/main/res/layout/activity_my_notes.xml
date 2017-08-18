@@ -4,8 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context="adzumrjada.notes.MyNotesActivity">
 
+
+    <ListView
+        android:id="@+id/MyNotes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/NewNote"
@@ -18,12 +24,4 @@
         app:backgroundTint="@color/colorPrimary"
         app:fabSize="normal" />
 
-    <TextView
-        android:id="@+id/MyNotes"
-        style="@style/TextAppearance.AppCompat.Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|start"
-        android:contentDescription="@string/MyNotes"
-        android:textSize="42sp" />
 </FrameLayout>

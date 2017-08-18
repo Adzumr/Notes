@@ -13,7 +13,7 @@ public class AboutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about);
     }
     public void Back(View view) {
-        Intent i = new Intent(this, MyNotesActivity.class);
+        Intent i = new Intent(this, ChooseActivity.class);
         startActivity(i);
     }
 

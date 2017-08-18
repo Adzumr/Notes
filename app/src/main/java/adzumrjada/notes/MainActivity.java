@@ -12,10 +12,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run(){
-                Intent Intent = new Intent(MainActivity.this, NewNoteActivity.class);
+                Intent Intent = new Intent(MainActivity.this, ChooseActivity.class);
                 startActivity(Intent);
                 finish();
             }

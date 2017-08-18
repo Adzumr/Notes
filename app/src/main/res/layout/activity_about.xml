@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#ffffff"
     tools:context="adzumrjada.notes.AboutActivity">
 
     <LinearLayout
@@ -22,27 +24,13 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:contentDescription="@string/Notes"
         android:cropToPadding="true"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/images" />
-
-    <TextView
-        android:id="@+id/About"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageView"
-        android:text="@string/About"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        tools:text="This Notes Saving Application Was Design And Developed For Android Application Development Training.  It's My First Android Application. I'm Very proud. Thanks to Sir. " />
+        app:srcCompat="@drawable/images"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/Back"
@@ -56,5 +44,19 @@
         android:layout_marginStart="21dp"
         android:onClick="Back"
         android:src="@android:drawable/ic_menu_revert"
+        app:backgroundTint="@color/colorPrimary"
         app:fabSize="normal" />
+
+    <TextView
+        android:id="@+id/About"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Back"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="19dp"
+        android:text="This Application Was Design For Training Purpose. I'm Very Happy Proud To Start Learning Android development."
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        tools:ignore="HardcodedText" />
 </RelativeLayout>
