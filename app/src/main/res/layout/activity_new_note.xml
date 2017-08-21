@@ -29,13 +29,13 @@
         style="@android:style/Widget.AutoCompleteTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Save"
+        android:layout_alignRight="@+id/Save"
+        android:layout_below="@+id/textView"
+        android:contentDescription="@string/Titile"
         android:ems="10"
         android:inputType="text|textPersonName"
-        android:textSize="24sp"
-        tools:text="@string/Titile"
-        android:layout_below="@+id/textView"
-        android:layout_alignRight="@+id/Save"
-        android:layout_alignEnd="@+id/Save" />
+        android:textSize="24sp" />
 
     <EditText
         android:id="@+id/Description"
@@ -63,9 +63,12 @@
         android:layout_marginLeft="21dp"
         android:layout_marginStart="21dp"
         android:onClick="Back"
-        android:src="@android:drawable/ic_menu_revert"
-        app:backgroundTint="@color/colorPrimary"
-        app:fabSize="normal" />
+        android:src="@drawable/ic_chevron_left_black_24dp"
+        android:tint="?android:attr/colorPressedHighlight"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:fabSize="normal"
+        app:rippleColor="@android:color/holo_orange_dark"
+        tools:ignore="VectorDrawableCompat" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/Save"
@@ -77,8 +80,10 @@
         android:layout_marginEnd="29dp"
         android:layout_marginRight="29dp"
         android:src="@android:drawable/ic_menu_save"
-        app:backgroundTint="@color/colorPrimary"
+        android:tint="?android:attr/colorPressedHighlight"
+        app:backgroundTint="@color/colorPrimaryDark"
         app:fabSize="normal"
+        app:rippleColor="@android:color/holo_orange_dark"
         tools:ignore="RelativeOverlap" />
 
 

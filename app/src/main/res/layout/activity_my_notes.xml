@@ -20,8 +20,10 @@
         android:layout_gravity="bottom"
         android:layout_margin="15dp"
         android:onClick="AddNewNote"
-        android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="@color/colorPrimary"
-        app:fabSize="normal" />
+        android:tint="?android:attr/colorPressedHighlight"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:fabSize="normal"
+        app:rippleColor="@android:color/holo_orange_dark"
+        app:srcCompat="@drawable/ic_note_add_black_24dp" />
 
 </FrameLayout>

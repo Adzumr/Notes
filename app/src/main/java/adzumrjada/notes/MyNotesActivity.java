@@ -16,6 +16,7 @@ public class MyNotesActivity extends AppCompatActivity {
         Intent i = new Intent(this, NewNoteActivity.class);
         startActivity(i);
     }
-
 }
+
+
 

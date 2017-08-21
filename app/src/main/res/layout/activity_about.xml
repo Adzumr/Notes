@@ -43,9 +43,11 @@
         android:layout_marginLeft="21dp"
         android:layout_marginStart="21dp"
         android:onClick="Back"
-        android:src="@android:drawable/ic_menu_revert"
-        app:backgroundTint="@color/colorPrimary"
-        app:fabSize="normal" />
+        android:tint="?android:attr/colorPressedHighlight"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:fabSize="normal"
+        app:rippleColor="@android:color/holo_orange_dark"
+        app:srcCompat="@drawable/ic_chevron_left_black_24dp" />
 
     <TextView
         android:id="@+id/About"
