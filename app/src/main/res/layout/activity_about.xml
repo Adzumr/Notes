@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:background="#ffffff"
+    android:padding="16dp"
     tools:context="adzumrjada.notes.AboutActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:orientation="horizontal"
-        tools:ignore="UselessParent"
-        android:id="@+id/linearLayout">
+        tools:ignore="UselessParent">
 
     </LinearLayout>
 
@@ -24,13 +24,13 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
         android:contentDescription="@string/Notes"
         android:cropToPadding="true"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/images"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        app:srcCompat="@drawable/images" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/Back"
