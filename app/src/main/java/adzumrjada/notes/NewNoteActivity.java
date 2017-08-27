@@ -9,8 +9,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.InputStreamReader;
 
 public class NewNoteActivity extends Activity {
 
@@ -22,6 +26,26 @@ public class NewNoteActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_note);
         SaveButton();
+        loadSavedFile();
+    }
+
+    private void loadSavedFile() {
+        try {
+            FileInputStream fileInputStream = openFileInput(descrpFile);
+            BufferedReader Reader = new BufferedReader(new InputStreamReader(new DataInputStream(fileInputStream)));
+
+            EditText editText = (EditText)findViewById(R.id.Description);
+
+            String line;
+            while ((line = Reader.readLine()) != null){
+                editText.append(line);
+                editText.append("\n");
+            }
+            fileInputStream.close();
+        }
+        catch (Exception e) {
+            Log.d(descrpFile, "Error Fetching File");
+        }
     }
 
     private void SaveButton(){
