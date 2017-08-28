@@ -8,6 +8,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
@@ -20,6 +21,7 @@ public class NewNoteActivity extends Activity {
 
     public static final String DebugTag = "TWP";
     public static final String descrpFile = "Notes.txt";
+    private Database db =  new Database(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class NewNoteActivity extends Activity {
                 editText.append("\n");
             }
             fileInputStream.close();
+
         }
         catch (Exception e) {
             Log.d(descrpFile, "Error Fetching File");
@@ -60,7 +63,7 @@ public class NewNoteActivity extends Activity {
                     openFileoutPut.write(string.getBytes());
                     openFileoutPut.close();
                 } catch (Exception e) {
-                    Log.d(descrpFile, "Error Saving");
+                    Toast.makeText(NewNoteActivity.this, "Can't Save File. Mae Sure Of Free Space", Toast.LENGTH_LONG).show();
                 }
 
                 Log.d(descrpFile, "Save Clicked" + string);
